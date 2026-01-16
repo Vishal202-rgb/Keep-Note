@@ -13,7 +13,7 @@ function createNoteEl(id, content) {
   element.value = content;
 
   element.addEventListener("dblclick", () => {
-    const warning = confirm("Do you want to delete this note?");
+    const warning = confirm("Bhai delete karna hai kya");
     if (warning) {
       deleteNote(id, element);
     }
@@ -60,5 +60,6 @@ function saveNote(notes) {
 function getNotes() {
   return JSON.parse(localStorage.getItem("note-app") || "[]");
 }
+
 
 btnEl.addEventListener("click", addNote);
